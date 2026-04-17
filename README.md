@@ -75,6 +75,7 @@ Overrides of the upstream `ntgbase.min.css` theme are isolated in `src/css/compo
 | `header-footer.css` | Header/footer background | Charcoal `#343741` |
 | `mainmenu-dropdown.css` | Main nav background | Territory orange `#D6410A` |
 | `statistics.css` | Statistics section | Sand `#D9DED4` background; black text and icons |
+| `main.css` | Display card icon hover colour | Icon colour changes to `#c84c01` on card hover, matching the heading hover colour |
 
 ## Deployment
 

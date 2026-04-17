@@ -5,3 +5,12 @@
 main.ntg-body {
   margin-bottom: 0 !important;
 }
+
+/* ==========================================================================
+   Display cards – icon colour matches heading hover colour (#c84c01)
+   ========================================================================== */
+
+.ntg-display-cards .card:hover i,
+.ntg-display-cards a.outer-link:hover i {
+  color: #c84c01;
+}
