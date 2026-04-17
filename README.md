@@ -65,6 +65,17 @@ Outputs compiled, minified CSS to `dist/theme.css` (referenced in Squiz Matrix v
 
 3. Run `npm run dev` to preview, or `npm run build` to compile.
 
+## Customisations
+
+Overrides of the upstream `ntgbase.min.css` theme are isolated in `src/css/components/` and imported last so they take cascade precedence.
+
+| File | What it overrides | Detail |
+| ---- | ----------------- | ------ |
+| `buttons.css` | `.btn.ntg-btn--secondary:hover` | Background and border colour changed to Territory orange `#D6410A` (was `#2d2d8a`) |
+| `header-footer.css` | Header/footer background | Charcoal `#343741` |
+| `mainmenu-dropdown.css` | Main nav background | Territory orange `#D6410A` |
+| `statistics.css` | Statistics section | Sand `#D9DED4` background; black text and icons |
+
 ## Deployment
 
 Use the `deploy-to-dev.prompt.md` prompt with GitHub Copilot to stage, commit, and push changes to the `dev` branch automatically.
