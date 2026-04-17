@@ -14,3 +14,15 @@ header.ntg-header {
 .ntg-footer__text {
   background-color: #343741;
 }
+
+/* ---- Search submit button ---- */
+/* Default: Territory orange (#D6410A); Hover: deep red (#C33826) */
+form.search .input-group-append button {
+  background: #d6410a;
+  background-image: none;
+}
+
+form.search .input-group-append button:hover {
+  background: #c33826;
+  background-image: none;
+}

@@ -11,7 +11,7 @@ fuel-security/
 │       ├── main.css                  # CSS entry point — add @imports here
 │       └── components/
 │           ├── mainmenu-dropdown.css # Navigation dropdown styles; nav bar background: Territory orange (#D6410A)
-│           ├── header-footer.css     # Header/footer brand colour overrides; background: Charcoal (#343741)
+│           ├── header-footer.css     # Header/footer brand colour overrides; header/footer background: Charcoal (#343741); search button default: Territory orange (#D6410A), hover: deep red (#C33826)
 │           ├── statistics.css        # Statistics section overrides; background: Sand (#D9DED4), black text/icons
 │           └── main.css              # Main element overrides; removes bottom margin
 ├── Fuel security_files/              # Static assets (vendor JS, base CSS)
