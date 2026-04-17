@@ -9,8 +9,11 @@ export default defineConfig({
         // CSS goes to dist/ root for easy git file bridge referencing;
         // other assets keep their original subfolder.
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name && assetInfo.name.endsWith(".css")) {
+          if (assetInfo.name === "print.css") {
             return "[name][extname]";
+          }
+          if (assetInfo.name && assetInfo.name.endsWith(".css")) {
+            return "theme.css";
           }
           return "Fuel security_files/[name][extname]";
         },

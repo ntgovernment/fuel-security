@@ -3,6 +3,6 @@ dist/*
 !dist/alt.css
 !dist/alt2.css
 !dist/print.css
-!dist/Fuel security.css
+!dist/theme.css
 Fuel security_files/
 Fuel security.html
