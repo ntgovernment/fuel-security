@@ -10,8 +10,8 @@ fuel-security/
 │   └── css/
 │       ├── main.css                  # CSS entry point — add @imports here
 │       └── components/
-│           ├── mainmenu-dropdown.css # Navigation dropdown styles
-│           └── header-footer.css     # Header/footer brand colour overrides
+│           ├── mainmenu-dropdown.css # Navigation dropdown styles; nav bar background: Territory orange (#D6410A)
+│           └── header-footer.css     # Header/footer brand colour overrides; background: Charcoal (#343741)
 ├── Fuel security_files/              # Static assets (vendor JS, base CSS)
 │   ├── ntgbase.min.css
 │   ├── bootstrap.bundle.min.js
