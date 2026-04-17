@@ -14,3 +14,39 @@ main.ntg-body {
 .ntg-display-cards a.outer-link:hover i {
   color: #c84c01;
 }
+
+/* ==========================================================================
+   Homepage news
+   ========================================================================== */
+
+.homepage-news .text-ntg-sky-blue {
+  color: #000 !important;
+}
+
+.homepage-news .card:hover .card-title {
+  color: #c84c01 !important;
+}
+
+.homepage-news .card {
+  border-radius: 0;
+}
+
+.homepage-news .card-header {
+  border-bottom: 0;
+}
+
+.homepage-news .card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.15em 0.65em;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 2px;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #1f1e27;
+  border: 1px solid #d3d3d7;
+}
