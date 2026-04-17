@@ -6,10 +6,11 @@ export default defineConfig({
     rollupOptions: {
       input: "./Fuel security.html",
       output: {
-        // Emit the compiled CSS as the well-known alt.css artifact
+        // CSS goes to dist/ root for easy git file bridge referencing;
+        // other assets keep their original subfolder.
         assetFileNames: (assetInfo) => {
           if (assetInfo.name && assetInfo.name.endsWith(".css")) {
-            return "Fuel security_files/alt.css";
+            return "[name][extname]";
           }
           return "Fuel security_files/[name][extname]";
         },

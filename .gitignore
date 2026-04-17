@@ -1,4 +1,8 @@
 node_modules/
-dist/
+dist/*
+!dist/alt.css
+!dist/alt2.css
+!dist/print.css
+!dist/Fuel security.css
 Fuel security_files/
 Fuel security.html
