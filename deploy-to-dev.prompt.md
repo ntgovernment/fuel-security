@@ -1,9 +1,11 @@
 # Deploy to Dev Prompt
 
 ## Purpose
+
 Automate the process of deploying changes to the development branch, including staging, summarizing, committing, and pushing changes.
 
 ## Steps
+
 1. Stage all changes:
    - `git add .`
 2. Generate a summary of all changes made during the current chat session.
@@ -13,4 +15,4 @@ Automate the process of deploying changes to the development branch, including s
 
 ---
 
-*This prompt is intended for Copilot or other automation agents to streamline the deployment workflow to the development branch.*
+_This prompt is intended for Copilot or other automation agents to streamline the deployment workflow to the development branch._

@@ -10,7 +10,8 @@ fuel-security/
 │   └── css/
 │       ├── main.css                  # CSS entry point — add @imports here
 │       └── components/
-│           └── mainmenu-dropdown.css # Navigation dropdown styles
+│           ├── mainmenu-dropdown.css # Navigation dropdown styles
+│           └── header-footer.css     # Header/footer brand colour overrides
 ├── Fuel security_files/              # Static assets (vendor JS, base CSS)
 │   ├── ntgbase.min.css
 │   ├── bootstrap.bundle.min.js
@@ -56,7 +57,7 @@ Outputs compiled, minified CSS to `dist/Fuel security_files/alt.css`.
 2. Add an `@import` line to `src/css/main.css`:
 
    ```css
-   @import './components/hero-banner.css';
+   @import "./components/hero-banner.css";
    ```
 
 3. Run `npm run dev` to preview, or `npm run build` to compile.
