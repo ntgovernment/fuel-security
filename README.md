@@ -16,6 +16,7 @@ fuel-security/
 │   │       ├── statistics.css        # Statistics section styles
 │   │       └── main.css              # General page overrides + homepage-news section styles
 │   └── js/
+│       ├── main.js                   # JS entry point — add imports here
 │       └── homepage-news.js          # Runtime JS for homepage news cards (tag transformation)
 ├── Fuel security_files/              # Static assets (vendor JS, base CSS)
 │   ├── ntgbase.min.css
@@ -47,7 +48,7 @@ npm run dev
 
 Vite starts a local dev server and opens `Fuel security.html` in your browser.  
 `src/css/main.css` is linked directly in the HTML so all `@import` chains are resolved in-memory with HMR — no build step needed during development.  
-`src/js/homepage-news.js` is loaded as a `<script type="module">` and is also served with HMR.
+`src/js/main.js` is loaded as a `<script type="module">` and is also served with HMR.
 
 ## Build
 
@@ -56,11 +57,12 @@ npm run build
 ```
 
 Outputs to `dist/`:
-- `theme.css` — compiled, minified CSS (all `src/css/` sources merged)
-- `print.css` — print stylesheet
-- `Fuel security_files/homepage-news.js` — compiled JS module
 
-`theme.css` and `print.css` are referenced in Squiz Matrix via the git file bridge.
+- `theme.css` — compiled, minified CSS (all `src/css/` sources merged)
+- `theme.js` — compiled JS (all `src/js/` modules merged via `src/js/main.js`)
+- `print.css` — print stylesheet
+
+`theme.css`, `theme.js`, and `print.css` are referenced in Squiz Matrix via the git file bridge.
 
 ## Adding new CSS component files
 
@@ -76,39 +78,40 @@ Outputs to `dist/`:
 ## Adding new JS modules
 
 1. Create a new file in `src/js/`, e.g. `src/js/my-feature.js`
-2. Add a `<script type="module">` tag to `Fuel security.html`:
+2. Add an import to `src/js/main.js`:
 
-   ```html
-   <script type="module" src="./src/js/my-feature.js"></script>
+   ```js
+   import "./my-feature.js";
    ```
 
-3. Vite will bundle it to `dist/Fuel security_files/my-feature.js` on build.
+3. Vite will include it in `dist/theme.js` on build. No HTML changes needed.
 
 ## Customisations
 
 Overrides of the upstream `ntgbase.min.css` theme are isolated in `src/css/components/` and imported last so they take cascade precedence.
 
-| File                    | What it overrides                              | Detail                                                                                          |
-| ----------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `buttons.css`           | `.btn.ntg-btn--secondary:hover`                | Background and border colour changed to Territory orange `#D6410A` (was `#2d2d8a`)              |
-| `buttons.css`           | `.homepage-news .btn.ntg-btn`                  | Border radius removed from the "View all" button                                                |
-| `header-footer.css`     | Header/footer background                       | Charcoal `#343741`                                                                              |
-| `mainmenu-dropdown.css` | Main nav background                            | Territory orange `#D6410A`                                                                      |
-| `statistics.css`        | Statistics section                             | Sand `#D9DED4` background; black text and icons                                                 |
-| `main.css`              | Display card icon hover colour                 | Icon colour changes to `#c84c01` on card hover, matching the heading hover colour               |
-| `main.css`              | `.homepage-news .text-ntg-sky-blue`            | Blue utility class overridden to black (`#000`) within the news section                         |
-| `main.css`              | `.homepage-news .card:hover .card-title`       | Card title turns orange (`#c84c01`) on hover                                                    |
-| `main.css`              | `.homepage-news .card`                         | Border radius removed from news cards                                                           |
-| `main.css`              | `.homepage-news .card-header`                  | Bottom border removed from card header                                                          |
-| `main.css`              | `.homepage-news .card-tag`                     | Category label styled as a tag (design system default variant: white bg, `#1f1e27` text, `#d3d3d7` border) |
+| File                    | What it overrides                        | Detail                                                                                                     |
+| ----------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `buttons.css`           | `.btn.ntg-btn--secondary:hover`          | Background and border colour changed to Territory orange `#D6410A` (was `#2d2d8a`)                         |
+| `buttons.css`           | `.homepage-news .btn.ntg-btn`            | Border radius removed from the "View all" button                                                           |
+| `header-footer.css`     | Header/footer background                 | Charcoal `#343741`                                                                                         |
+| `mainmenu-dropdown.css` | Main nav background                      | Territory orange `#D6410A`                                                                                 |
+| `statistics.css`        | Statistics section                       | Sand `#D9DED4` background; black text and icons                                                            |
+| `main.css`              | Display card icon hover colour           | Icon colour changes to `#c84c01` on card hover, matching the heading hover colour                          |
+| `main.css`              | `.homepage-news .text-ntg-sky-blue`      | Blue utility class overridden to black (`#000`) within the news section                                    |
+| `main.css`              | `.homepage-news .card:hover .card-title` | Card title turns orange (`#c84c01`) on hover                                                               |
+| `main.css`              | `.homepage-news .card`                   | Border radius removed from news cards                                                                      |
+| `main.css`              | `.homepage-news .card-header`            | Bottom border removed from card header                                                                     |
+| `main.css`              | `.homepage-news .card-tag`               | Category label styled as a tag (design system default variant: white bg, `#1f1e27` text, `#d3d3d7` border) |
 
 ### Homepage news JS (`src/js/homepage-news.js`)
 
 Runs at page load to transform the CMS-rendered category label markup into tag elements:
+
 - Removes `inline-block float-start` classes, adds `card-tag`
 - Strips the Font Awesome icon (`<i>`) from the label
 
-Bundled to `dist/Fuel security_files/homepage-news.js` on build.
+Imported by `src/js/main.js` and bundled into `dist/theme.js` on build.
 
 ## Deployment
 

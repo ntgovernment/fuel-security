@@ -4,10 +4,14 @@ export default defineConfig({
   root: ".",
   build: {
     rollupOptions: {
-      input: "./Fuel security.html",
+      input: {
+        page: "./Fuel security.html",
+        theme: "./src/js/main.js",
+      },
       output: {
-        // JS chunks go to Fuel security_files/ to match the existing asset layout.
-        entryFileNames: "Fuel security_files/[name].js",
+        // theme entry outputs to dist/theme.js; other chunks to Fuel security_files/
+        entryFileNames: (chunk) =>
+          chunk.name === "theme" ? "theme.js" : "Fuel security_files/[name].js",
         chunkFileNames: "Fuel security_files/[name].js",
         // CSS goes to dist/ root for easy git file bridge referencing;
         // other assets keep their original subfolder.
