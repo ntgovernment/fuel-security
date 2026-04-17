@@ -21,7 +21,7 @@ fuel-security/
 └── package.json
 ```
 
-> `Fuel security_files/alt.css` and `Fuel security.html` are build/snapshot artifacts tracked by `.gitignore`.
+> `dist/theme.css`, `dist/print.css`, and `Fuel security.html` are build artifacts. `dist/theme.css` and `dist/print.css` are tracked by git for the Squiz Matrix file bridge; all other `dist/` output and `Fuel security.html` are excluded via `.gitignore`.
 
 ## Prerequisites
 
@@ -49,7 +49,7 @@ Vite starts a local dev server and opens `Fuel security.html` in your browser.
 npm run build
 ```
 
-Outputs compiled, minified CSS to `dist/Fuel security_files/alt.css`.
+Outputs compiled, minified CSS to `dist/theme.css` (referenced in Squiz Matrix via the git file bridge).
 
 ## Adding new CSS component files
 
@@ -65,3 +65,35 @@ Outputs compiled, minified CSS to `dist/Fuel security_files/alt.css`.
 ## Deployment
 
 Use the `deploy-to-dev.prompt.md` prompt with GitHub Copilot to stage, commit, and push changes to the `dev` branch automatically.
+
+## Brand colours
+
+Source: _Accessible Colours — Brand Guidelines, May 2025_
+
+### Primary
+
+| Name      | HEX       | Accessible HEX | Accessible with |
+| --------- | --------- | -------------- | --------------- |
+| Territory | `#F4551A` | `#D6410A`      | White text      |
+| Charcoal  | `#343741` | `#343741`      | White text      |
+
+### Secondary
+
+| Name      | HEX       | Accessible HEX | Accessible with |
+| --------- | --------- | -------------- | --------------- |
+| Sand      | `#D9DED4` | `#D9DED4`      | Black text      |
+| Monsoon   | `#003251` | `#003251`      | White text      |
+| Coastline | `#2E979C` | `#288186`      | White text      |
+| Savannah  | `#566C30` | `#566C30`      | White text      |
+| Ranges    | `#552855` | `#552855`      | White text      |
+
+### Regional
+
+| Name              | HEX       | Accessible HEX | Accessible with     |
+| ----------------- | --------- | -------------- | ------------------- |
+| Darwin            | `#76BA43` | `#398600`      | Black or white text |
+| Top End           | `#009DC1` | `#00819E`      | Black or white text |
+| East Arnhem       | `#D1DD26` | `#D1DD26`      | Black text          |
+| Big Rivers        | `#FCB414` | `#FCB414`      | Black text          |
+| Barkly            | `#F05A24` | `#D2430F`      | White text          |
+| Central Australia | `#ED164E` | `#A8114B`      | White text          |
