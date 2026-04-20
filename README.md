@@ -11,12 +11,12 @@ fuel-security/
 │   │   ├── main.css                  # CSS entry point — add @imports here
 │   │   └── components/
 │   │       ├── buttons.css           # Button overrides (e.g. ntg-btn--secondary hover, homepage-news View all)
-│   │       ├── mainmenu-dropdown.css # Navigation dropdown styles; nav bar background: Territory orange (#D6410A)
+│   │       ├── mainmenu-dropdown.css # Navigation dropdown styles; click-to-open; white bg, bold black text, #fcccbb hover accent
 │   │       ├── header-footer.css     # Header/footer brand colour overrides; background: Charcoal (#343741)
 │   │       ├── statistics.css        # Statistics section styles
 │   │       └── main.css              # General page overrides + homepage-news section styles
 │   └── js/
-│       ├── main.js                   # JS entry point — add imports here
+│       ├── main.js                   # JS entry point — click-to-open dropdowns, hamburger toggle
 │       └── homepage-news.js          # Runtime JS for homepage news cards (tag transformation)
 ├── Fuel security_files/              # Static assets (vendor JS, base CSS)
 │   ├── ntgbase.min.css
@@ -95,7 +95,7 @@ Overrides of the upstream `ntgbase.min.css` theme are isolated in `src/css/compo
 | `buttons.css`           | `.btn.ntg-btn--secondary:hover`          | Background and border colour changed to Territory orange `#D6410A` (was `#2d2d8a`)                         |
 | `buttons.css`           | `.homepage-news .btn.ntg-btn`            | Border radius removed from the "View all" button                                                           |
 | `header-footer.css`     | Header/footer background                 | Charcoal `#343741`                                                                                         |
-| `mainmenu-dropdown.css` | Main nav background                      | Territory orange `#D6410A`                                                                                 |
+| `mainmenu-dropdown.css` | Main nav background & behaviour          | White `#ffffff` bg; bold black text; click-to-open dropdowns with Font Awesome chevron icons; `#fcccbb` hover with `#f4551a` accent borders; hamburger toggle on mobile; level-3 menus hidden |
 | `statistics.css`        | Statistics section                       | Sand `#D9DED4` background; black text and icons                                                            |
 | `main.css`              | Display card icon hover colour           | Icon colour changes to `#c84c01` on card hover, matching the heading hover colour                          |
 | `main.css`              | `.homepage-news .text-ntg-sky-blue`      | Blue utility class overridden to black (`#000`) within the news section                                    |
