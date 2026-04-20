@@ -10,7 +10,7 @@ fuel-security/
 │   ├── css/
 │   │   ├── main.css                  # CSS entry point — add @imports here
 │   │   └── components/
-│   │       ├── buttons.css           # Button overrides (e.g. ntg-btn--secondary hover, homepage-news View all)
+│   │       ├── buttons.css           # Button overrides: primary bg Charcoal (#343741), secondary outline Charcoal + white bg, hover Territory orange (#D6410A)
 │   │       ├── mainmenu-dropdown.css # Navigation dropdown styles; click-to-open; white bg, bold black text, #fcccbb hover accent
 │   │       ├── header-footer.css     # Header/footer brand colour overrides; background: Charcoal (#343741)
 │   │       ├── statistics.css        # Statistics section styles
@@ -92,6 +92,8 @@ Overrides of the upstream `ntgbase.min.css` theme are isolated in `src/css/compo
 
 | File                    | What it overrides                        | Detail                                                                                                                                                                                        |
 | ----------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `buttons.css`           | `.btn.ntg-btn` (primary)                 | Background changed from navy `#1f1f5f` to Charcoal `#343741`; active state also updated                                                                                                      |
+| `buttons.css`           | `.btn.ntg-btn--secondary` (outline)      | Text and border colour changed from navy `#1f1f5f` to Charcoal `#343741`; white background; active state also updated                                                                        |
 | `buttons.css`           | `.btn.ntg-btn--secondary:hover`          | Background and border colour changed to Territory orange `#D6410A` (was `#2d2d8a`)                                                                                                            |
 | `buttons.css`           | `.homepage-news .btn.ntg-btn`            | Border radius removed from the "View all" button                                                                                                                                              |
 | `header-footer.css`     | Header/footer background                 | Charcoal `#343741`                                                                                                                                                                            |
