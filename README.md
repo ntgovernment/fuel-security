@@ -97,7 +97,7 @@ Overrides of the upstream `ntgbase.min.css` theme are isolated in `src/css/compo
 | `header-footer.css`     | Header/footer background                 | Charcoal `#343741`                                                                                         |
 | `mainmenu-dropdown.css` | Main nav background & behaviour          | White `#ffffff` bg; bold black text; click-to-open dropdowns with Font Awesome chevron icons; `#fcccbb` hover with `#f4551a` accent borders; hamburger toggle on mobile; level-3 menus hidden |
 | `statistics.css`        | Statistics section                       | Sand `#D9DED4` background; black text and icons                                                            |
-| `main.css`              | Display card icon hover colour           | Icon colour changes to `#c84c01` on card hover, matching the heading hover colour                          |
+| `main.css`              | Display card icons                       | Icons use `fa-solid` (FA 6); default colour `#f4551a` (orange), hover colour `#c84c01` (darker orange)    |
 | `main.css`              | `.homepage-news .text-ntg-sky-blue`      | Blue utility class overridden to black (`#000`) within the news section                                    |
 | `main.css`              | `.homepage-news .card:hover .card-title` | Card title turns orange (`#c84c01`) on hover                                                               |
 | `main.css`              | `.homepage-news .card`                   | Border radius removed from news cards                                                                      |

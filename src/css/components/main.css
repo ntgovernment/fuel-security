@@ -10,6 +10,11 @@ main.ntg-body {
    Display cards – icon colour matches heading hover colour (#c84c01)
    ========================================================================== */
 
+.ntg-display-cards .card i,
+.ntg-display-cards a.outer-link i {
+  color: #f4551a;
+}
+
 .ntg-display-cards .card:hover i,
 .ntg-display-cards a.outer-link:hover i {
   color: #c84c01;
