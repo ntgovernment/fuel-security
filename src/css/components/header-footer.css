@@ -15,6 +15,11 @@ header.ntg-header {
   background-color: #343741;
 }
 
+/* ---- Mobile search banner ---- */
+.mobile-banner {
+  background-color: #343741;
+}
+
 /* ---- Search submit button ---- */
 /* Default: Territory orange (#D6410A); Hover: deep red (#C33826) */
 form.search .input-group-append button {
