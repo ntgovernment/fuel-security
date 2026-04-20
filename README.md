@@ -17,7 +17,8 @@ fuel-security/
 │   │       └── main.css              # General page overrides: display-card icon colours, card-title colour + animated arrow; homepage-news section styles
 │   └── js/
 │       ├── main.js                   # JS entry point — click-to-open dropdowns, hamburger toggle
-│       └── homepage-news.js          # Runtime JS for homepage news cards (tag transformation)
+│       ├── homepage-news.js          # Runtime JS for homepage news cards (tag transformation)
+│       └── display-cards.js          # Runtime JS — swaps FA 5 `fal` icons to FA 6 `fa-solid` in display cards
 ├── Fuel security_files/              # Static assets (vendor JS, base CSS)
 │   ├── ntgbase.min.css
 │   ├── bootstrap.bundle.min.js
@@ -90,23 +91,23 @@ Outputs to `dist/`:
 
 Overrides of the upstream `ntgbase.min.css` theme are isolated in `src/css/components/` and imported last so they take cascade precedence.
 
-| File                    | What it overrides                        | Detail                                                                                                                                                                                        |
-| ----------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `buttons.css`           | `.btn.ntg-btn` (primary)                 | Background changed from navy `#1f1f5f` to Charcoal `#343741`; active state also updated                                                                                                       |
-| `buttons.css`           | `.btn.ntg-btn--secondary` (outline)      | Text and border colour changed from navy `#1f1f5f` to Charcoal `#343741`; white background; active state also updated                                                                         |
-| `buttons.css`           | `.btn.ntg-btn--secondary:hover`          | Background and border colour changed to Territory orange `#D6410A` (was `#2d2d8a`)                                                                                                            |
-| `buttons.css`           | `.homepage-news .btn.ntg-btn`            | Border radius removed from the "View all" button                                                                                                                                              |
-| `header-footer.css`     | Header/footer background                 | Charcoal `#343741`                                                                                                                                                                            |
-| `header-footer.css`     | Mobile search banner background          | `.mobile-banner` overridden from navy `#1f1f5f` to Charcoal `#343741`                                                                                                                         |
-| `mainmenu-dropdown.css` | Main nav background & behaviour          | White `#ffffff` bg; bold black text; click-to-open dropdowns with Font Awesome chevron icons; `#fcccbb` hover with `#f4551a` accent borders; hamburger toggle on mobile; level-3 menus hidden |
-| `statistics.css`        | Statistics section                       | Sand `#D9DED4` background; black text and icons                                                                                                                                               |
-| `main.css`              | Display card icons                       | Icons use `fa-solid` (FA 6); default colour `#f4551a` (orange), hover colour `#c84c01` (darker orange)                                                                                        |
-| `main.css`              | Display card titles                      | Title colour `#343741` (Charcoal); orange long-arrow-right (`→`) appended via `::after`, slides 4 px right on hover; title uses flexbox row layout                                            |
-| `main.css`              | `.homepage-news .text-ntg-sky-blue`      | Blue utility class overridden to black (`#000`) within the news section                                                                                                                       |
-| `main.css`              | `.homepage-news .card-title`             | Title colour set to Charcoal `#343741`; turns orange `#c84c01` on hover                                                                                                                      |
-| `main.css`              | `.homepage-news .card`                   | Border radius removed from news cards                                                                                                                                                         |
-| `main.css`              | `.homepage-news .card-header`            | Bottom border removed from card header                                                                                                                                                        |
-| `main.css`              | `.homepage-news .card-tag`               | Category label styled as a tag (design system default variant: white bg, `#1f1e27` text, `#d3d3d7` border)                                                                                    |
+| File                    | What it overrides                   | Detail                                                                                                                                                                                        |
+| ----------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `buttons.css`           | `.btn.ntg-btn` (primary)            | Background changed from navy `#1f1f5f` to Charcoal `#343741`; active state also updated                                                                                                       |
+| `buttons.css`           | `.btn.ntg-btn--secondary` (outline) | Text and border colour changed from navy `#1f1f5f` to Charcoal `#343741`; white background; active state also updated                                                                         |
+| `buttons.css`           | `.btn.ntg-btn--secondary:hover`     | Background and border colour changed to Territory orange `#D6410A` (was `#2d2d8a`)                                                                                                            |
+| `buttons.css`           | `.homepage-news .btn.ntg-btn`       | Border radius removed from the "View all" button                                                                                                                                              |
+| `header-footer.css`     | Header/footer background            | Charcoal `#343741`                                                                                                                                                                            |
+| `header-footer.css`     | Mobile search banner background     | `.mobile-banner` overridden from navy `#1f1f5f` to Charcoal `#343741`                                                                                                                         |
+| `mainmenu-dropdown.css` | Main nav background & behaviour     | White `#ffffff` bg; bold black text; click-to-open dropdowns with Font Awesome chevron icons; `#fcccbb` hover with `#f4551a` accent borders; hamburger toggle on mobile; level-3 menus hidden |
+| `statistics.css`        | Statistics section                  | Sand `#D9DED4` background; black text and icons                                                                                                                                               |
+| `main.css`              | Display card icons                  | Icons use `fa-solid` (FA 6); default colour `#f4551a` (orange), hover colour `#c84c01` (darker orange)                                                                                        |
+| `main.css`              | Display card titles                 | Title colour `#343741` (Charcoal); orange long-arrow-right (`→`) appended via `::after`, slides 4 px right on hover; title uses flexbox row layout                                            |
+| `main.css`              | `.homepage-news .text-ntg-sky-blue` | Blue utility class overridden to black (`#000`) within the news section                                                                                                                       |
+| `main.css`              | `.homepage-news .card-title`        | Title colour set to Charcoal `#343741`; turns orange `#c84c01` on hover                                                                                                                       |
+| `main.css`              | `.homepage-news .card`              | Border radius removed from news cards                                                                                                                                                         |
+| `main.css`              | `.homepage-news .card-header`       | Bottom border removed from card header                                                                                                                                                        |
+| `main.css`              | `.homepage-news .card-tag`          | Category label styled as a tag (design system default variant: white bg, `#1f1e27` text, `#d3d3d7` border)                                                                                    |
 
 ### Homepage news JS (`src/js/homepage-news.js`)
 
@@ -114,6 +115,15 @@ Runs at page load to transform the CMS-rendered category label markup into tag e
 
 - Removes `inline-block float-start` classes, adds `card-tag`
 - Strips the Font Awesome icon (`<i>`) from the label
+
+Imported by `src/js/main.js` and bundled into `dist/theme.js` on build.
+
+### Display cards JS (`src/js/display-cards.js`)
+
+Runs at page load to fix Font Awesome icon classes inside `.ntg-display-cards`:
+
+- Replaces `fal` (FA 5 Light) with `fa-solid` (FA 6) on all `<i>` elements
+- Needed because the CMS still renders the legacy FA 5 class while the site uses the FA 6 Pro kit
 
 Imported by `src/js/main.js` and bundled into `dist/theme.js` on build.
 

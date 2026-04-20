@@ -10,8 +10,9 @@ Update all documentation and Copilot instructions in the project to be comprehen
 
 ## Steps
 
-1. Review all documentation files (README, docs/, etc.) and Copilot instruction files.
-2. Update or add missing information, focusing on clarity and completeness.
+1. Run `npm run build` to ensure all build artifacts are up to date before documenting.
+2. Review all documentation files (README, docs/, etc.) and Copilot instruction files.
+3. Update or add missing information, focusing on clarity and completeness.
 3. Ensure instructions are actionable for both humans and coding agents.
 4. Save and commit changes.
 

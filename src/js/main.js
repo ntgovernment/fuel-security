@@ -1,4 +1,5 @@
 import "./homepage-news.js";
+import "./display-cards.js";
 
 /* ==========================================================================
    #mainmenu – Click-to-open dropdown behaviour
