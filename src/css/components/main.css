@@ -23,7 +23,7 @@ main.ntg-body {
 .ntg-display-cards .card-title {
   display: flex;
   align-items: center;
-  color: #343741;
+  color: #343741 !important;
 }
 
 .ntg-display-cards .card-title::after {
