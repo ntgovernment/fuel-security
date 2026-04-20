@@ -20,6 +20,28 @@ main.ntg-body {
   color: #c84c01;
 }
 
+.ntg-display-cards .card-title {
+  display: flex;
+  align-items: center;
+  color: #343741;
+}
+
+.ntg-display-cards .card-title::after {
+  content: "\f178";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 900;
+  color: #f4551a;
+  margin-left: auto;
+  font-size: inherit;
+  transform: translateX(-4px);
+  transition: transform 0.2s ease;
+}
+
+.ntg-display-cards .card:hover .card-title::after {
+  color: #c84c01;
+  transform: translateX(0);
+}
+
 /* ==========================================================================
    Homepage news
    ========================================================================== */
