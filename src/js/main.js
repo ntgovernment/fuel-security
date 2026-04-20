@@ -32,7 +32,9 @@ import "./display-cards.js";
       e.preventDefault();
       var wasOpen = li.classList.contains("open");
       // Close siblings at the same level
-      var siblings = li.parentElement.querySelectorAll(":scope > li.has-children");
+      var siblings = li.parentElement.querySelectorAll(
+        ":scope > li.has-children",
+      );
       siblings.forEach(function (sib) {
         if (sib !== li) {
           sib.classList.remove("open");
