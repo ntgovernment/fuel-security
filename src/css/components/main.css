@@ -50,6 +50,10 @@ main.ntg-body {
   color: #000 !important;
 }
 
+.homepage-news .card-title {
+  color: #343741 !important;
+}
+
 .homepage-news .card:hover .card-title {
   color: #c84c01 !important;
 }
