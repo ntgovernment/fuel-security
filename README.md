@@ -10,6 +10,7 @@ fuel-security/
 │   ├── css/
 │   │   ├── main.css                  # CSS entry point — add @imports here
 │   │   └── components/
+│   │       ├── alert.css             # Global alert banner styles: warning (#D6410A), information (#107CC0), critical (#A60F37); white inverse text + close button
 │   │       ├── buttons.css           # Button overrides: primary bg Charcoal (#343741), secondary outline Charcoal + white bg, hover Territory orange (#D6410A)
 │   │       ├── mainmenu-dropdown.css # Navigation dropdown styles; click-to-open; white bg, bold black text, #fcccbb hover accent
 │   │       ├── header-footer.css     # Header/footer brand colour overrides; background: Charcoal (#343741)
@@ -93,6 +94,7 @@ Overrides of the upstream `ntgbase.min.css` theme are isolated in `src/css/compo
 
 | File                    | What it overrides                   | Detail                                                                                                                                                                                        |
 | ----------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `alert.css`             | `.alert-warning`, `.alert-info`, `.alert-information`, `.alert-danger`, `.alert-critical` | Global alert banners with coloured backgrounds: warning `#D6410A` (orange), information `#107CC0` (blue), critical `#A60F37` (burgundy); white text, 20px bold title, 16px body, white 48×48 close button, flex layout |
 | `buttons.css`           | `.btn.ntg-btn` (primary)            | Background changed from navy `#1f1f5f` to Charcoal `#343741`; active state also updated                                                                                                       |
 | `buttons.css`           | `.btn.ntg-btn--secondary` (outline) | Text and border colour changed from navy `#1f1f5f` to Charcoal `#343741`; white background; active state also updated                                                                         |
 | `buttons.css`           | `.btn.ntg-btn--secondary:hover`     | Background and border colour changed to Territory orange `#D6410A` (was `#2d2d8a`)                                                                                                            |
