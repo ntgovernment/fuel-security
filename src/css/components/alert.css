@@ -112,20 +112,21 @@
   text-decoration: none;
 }
 
-/* Close button – 48×48 white icon, top-right */
+/* Close button – 24×24 white icon, anchored to top-right corner */
 .alert.alert-warning.alert-dismissible .btn-close,
 .alert.alert-info.alert-dismissible .btn-close,
 .alert.alert-information.alert-dismissible .btn-close,
 .alert.alert-danger.alert-dismissible .btn-close,
 .alert.alert-critical.alert-dismissible .btn-close {
-  width: 48px;
-  height: 48px;
-  padding: 10px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
   margin: 0;
+  position: absolute;
   top: 16px;
   right: 16px;
   opacity: 1;
-  background-size: 24px 24px;
+  background-size: 16px 16px;
   background-position: center;
   filter: brightness(0) invert(1);
 }
