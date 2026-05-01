@@ -3,11 +3,16 @@
    ========================================================================== */
 
 :root {
-  --clr-status-warning: #d6410a;
-  --clr-status-information: #107cc0;
-  --clr-status-critical: #a60f37;
-  --clr-text-inverse: #ffffff;
+  /* Status background colours — match Levels 2-4 from the response framework */
+  --clr-status-information: #ffc72c; /* Level 2 – yellow */
+  --clr-status-warning: #d6410a; /* Level 3 – orange */
+  --clr-status-critical: #c8102e; /* Level 4 – red */
+
+  /* Foreground (text) colours — chosen for WCAG AA contrast against each bg */
+  --clr-text-on-information: #212529; /* dark on yellow ≈ 11.6:1 (AAA) */
+  --clr-text-inverse: #ffffff; /* white on orange ≈ 5.0:1 (AA) / on red ≈ 6.8:1 (AAA) */
   --clr-link-inverse: #ffffff;
+  --clr-link-on-information: #212529;
 }
 
 /* Base override for top-of-page global alerts */
@@ -34,7 +39,10 @@
 .alert.alert-info,
 .alert.alert-information {
   --bs-alert-bg: var(--clr-status-information);
+  --bs-alert-color: var(--clr-text-on-information);
+  --bs-alert-link-color: var(--clr-link-on-information);
   background: var(--clr-status-information);
+  color: var(--clr-text-on-information);
 }
 
 .alert.alert-danger,
@@ -146,4 +154,36 @@
 .alert.alert-critical.alert-dismissible .btn-close:focus {
   box-shadow: 0 0 0 2px var(--clr-text-inverse);
   outline: none;
+}
+
+/* ==========================================================================
+   Information variant overrides — dark text on yellow background for WCAG contrast
+   ========================================================================== */
+.alert.alert-info .alert-title,
+.alert.alert-information .alert-title,
+.alert.alert-info .alert-body,
+.alert.alert-information .alert-body {
+  color: var(--clr-text-on-information);
+}
+
+.alert.alert-info a,
+.alert.alert-information a,
+.alert.alert-info .alert-link,
+.alert.alert-information .alert-link,
+.alert.alert-info a:hover,
+.alert.alert-information a:hover,
+.alert.alert-info a:focus,
+.alert.alert-information a:focus {
+  color: var(--clr-link-on-information);
+}
+
+.alert.alert-info.alert-dismissible .btn-close,
+.alert.alert-information.alert-dismissible .btn-close {
+  /* Keep Bootstrap's default dark close icon (no white invert) on the yellow bg */
+  filter: none;
+}
+
+.alert.alert-info.alert-dismissible .btn-close:focus,
+.alert.alert-information.alert-dismissible .btn-close:focus {
+  box-shadow: 0 0 0 2px var(--clr-text-on-information);
 }
