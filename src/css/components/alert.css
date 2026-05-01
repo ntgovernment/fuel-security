@@ -6,7 +6,7 @@
   /* Status background colours — match Levels 2-4 from the response framework */
   --clr-status-information: #ffc72c; /* Level 2 – yellow */
   --clr-status-warning: #d6410a; /* Level 3 – orange */
-  --clr-status-critical: #c8102e; /* Level 4 – red */
+  --clr-status-critical: #fc4141; /* Level 4 – red */
 
   /* Foreground (text) colours — chosen for WCAG AA contrast against each bg */
   --clr-text-on-information: #212529; /* dark on yellow ≈ 11.6:1 (AAA) */
