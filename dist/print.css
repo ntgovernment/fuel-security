@@ -5,6 +5,7 @@
   Page generated: 17 April 2026 13:51:31
 */
 
+
 /*
 
 Print Styles for the NTGov Design System
@@ -15,6 +16,8 @@ Release: 28/11/2023
 
 */
 
+
+
 /* Reset default styles for print */
 html {
   background: transparent !important;
@@ -24,77 +27,50 @@ html {
 }
 
 /* Remove these elements for print */
-.header,
-.footer,
-img {
+.header, .footer, img {
   display: none !important;
 }
 
 #header {
-  padding-bottom: 30px;
-  margin-left: -15px;
+    padding-bottom: 30px;
+    margin-left: -15px;
 }
 
 .site-logo {
-  display: block !important;
-  color: black !important;
-  filter: invert(100%);
-  float: left;
-  margin-right: 50px;
+    display: block !important;
+    color: black !important;
+    filter: invert(100%);
+    float: left;
+    margin-right: 50px;
 }
 
 .site-name {
-  margin-left: 60px;
-  float: right;
+    margin-left: 60px;
+    float: right;
 }
 
 .border-end {
-  border-right: hidden !important;
+    border-right: hidden !important;
 }
 
 /* Adjust padding and margin for printing */
-body,
-.container,
-.container-fluid {
+body, .container, .container-fluid {
   padding: 0 !important;
   margin: 0 !important;
 }
 
 /* Override Bootstrap styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   page-break-after: avoid;
 }
 
 /* Adjust heading font sizes for print */
-h1 {
-  font-size: 28px !important;
-  color: black;
-}
-h2 {
-  font-size: 24px !important;
-  color: black;
-}
-h3 {
-  font-size: 20px !important;
-  color: black;
-}
-h4 {
-  font-size: 18px !important;
-  color: black;
-}
-h5 {
-  font-size: 16px !important;
-  color: black;
-}
-h6 {
-  font-size: 14px !important;
-  color: black;
-}
+h1 { font-size: 28px !important; color: black; }
+h2 { font-size: 24px !important; color: black; }
+h3 { font-size: 20px !important; color: black; }
+h4 { font-size: 18px !important; color: black; }
+h5 { font-size: 16px !important; color: black; }
+h6 { font-size: 14px !important; color: black; }
 
 /* Adjust body font size for print */
 body {
@@ -104,7 +80,7 @@ body {
 
 /* Footer */
 .ntg-footer__text {
-  color: black !important;
+    color: black !important;
 }
 
 /* Page sections */
@@ -115,101 +91,106 @@ section {
 /* Padding */
 
 .p-1 {
-  padding: 1px !important;
+    padding: 1px !important;
 }
 
 .p-2 {
-  padding: 2px !important;
+    padding: 2px !important;
 }
 
 .p-3 {
-  padding: 3px !important;
+    padding: 3px !important;
 }
 
 .p-4 {
-  padding: 4px !important;
+    padding: 4px !important;
 }
 
 .p-5 {
-  padding: 5px !important;
+    padding: 5px !important;
 }
 
+
 .py-1 {
-  padding-top: 1px !important;
-  padding-bottom: 1px !important;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
 }
 
 .py-2 {
-  padding-top: 2px !important;
-  padding-bottom: 2px !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
 }
 
 .py-3 {
-  padding-top: 3px !important;
-  padding-bottom: 3px !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
 }
 
 .py-4 {
-  padding-top: 4px !important;
-  padding-bottom: 4px !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
 }
 
 .py-5 {
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
 }
+
 
 /* Margins */
 
+
 .m-1 {
-  margin: 1px !important;
+    margin: 1px !important;
 }
 
 .m-2 {
-  margin: 2px !important;
+    margin: 2px !important;
 }
 
 .m-3 {
-  margin: 3px !important;
+    margin: 3px !important;
 }
 
 .m-4 {
-  margin: 4px !important;
+    margin: 4px !important;
 }
 
 .m-5 {
-  margin: 5px !important;
+    margin: 5px !important;
 }
 
 .my-0 {
-  margin-top: 20px !important;
-  margin-bottom: 10px !important;
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
 }
 
 .my-1 {
-  margin-top: 1px !important;
-  margin-bottom: 1px !important;
+    margin-top: 1px !important;
+    margin-bottom: 1px !important;
 }
 
 .my-2 {
-  margin-top: 2px !important;
-  margin-bottom: 2px !important;
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
 }
 
 .my-3 {
-  margin-top: 3px !important;
-  margin-bottom: 3px !important;
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
 }
 
 .my-4 {
-  margin-top: 4px !important;
-  margin-bottom: 4px !important;
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
 }
 
 .my-5 {
-  margin-top: 5px !important;
-  margin-bottom: 5px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
 }
+
+
 
 /* Style tables for print */
 table {
@@ -218,32 +199,26 @@ table {
   margin-bottom: 10px;
 }
 
-table,
-th,
-td {
+table, th, td {
   border: 1px solid #000; /* Set table borders to black */
 }
 
-th,
-td {
+th, td {
   padding: 8px;
   text-align: left;
 }
 
-ul,
-ol {
+ul, ol {
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-ul,
-ol,
-li {
+ul, ol, li {
   page-break-inside: avoid;
 }
 
 main ul li:before {
-  color: black !important;
+    color: black !important;
 }
 
 a {
@@ -264,40 +239,40 @@ a {
   border: none;
 }
 
-.card-title,
-.inline-block {
-  color: black !important;
+.card-title, .inline-block {
+    color: black !important;
 }
 
 .card-link {
-  display: none;
+    display: none;
 }
 
 /* Home page topics */
 .ntg-group-topics h3 {
-  color: black !important;
+    color: black !important;
 }
 
-/* Callout */
+/* Callout */ 
 .ntg-callout__content {
-  border-left: 0.5rem solid black !important;
+    border-left: 0.5rem solid black !important;
 }
 
 .ntg-callout__text {
-  padding-left: 10px;
+    padding-left: 10px;
 }
 
 /* Nav blocks */
 
+
 /* Document cards */
 .ntg-document-cards {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .ntg-document-cards__title {
-  padding-top: 20px !important;
+    padding-top: 20px !important;
 }
 
 .ntg-document-cards .card .card-body {
-  margin-left: 10px;
+    margin-left: 10px;
 }
