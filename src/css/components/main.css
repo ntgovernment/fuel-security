@@ -81,3 +81,53 @@ main.ntg-body {
   color: #1f1e27;
   border: 1px solid #d3d3d7;
 }
+
+/* ==========================================================================
+   Fuel levels
+   ========================================================================== */
+
+/* Landing page layout */
+.fuel-levels .container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1320px;
+}
+
+/* Content page layout */
+.fuel-levels p:last-of-type {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+/* Shared image styles */
+.fuel-levels .container img,
+.fuel-levels p:last-of-type img {
+  width: 25%;
+  height: auto;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .fuel-levels .container,
+  .fuel-levels p:last-of-type {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100% !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .fuel-levels .container img,
+  .fuel-levels p:last-of-type img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
