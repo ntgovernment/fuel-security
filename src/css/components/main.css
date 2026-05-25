@@ -94,6 +94,8 @@ main.ntg-body {
   justify-content: space-between;
   align-items: stretch;
   max-width: 1320px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 /* Content page layout */
